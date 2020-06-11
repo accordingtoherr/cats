@@ -35,7 +35,15 @@ const App = () => {
     
         <button type="submit" className="button">New Cat</button>
 
-        <Cat />
+        {cats.map(cats =>
+
+
+(<Cat
+ 
+image={data.url} /> )) };
+
+
+
 
 
          

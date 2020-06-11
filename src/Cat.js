@@ -10,7 +10,8 @@ import './App.css';
     return(
 
   <div className="items">  
- <img src={url} alt=""></img>
+  <h1>Cats Are Cool</h1>
+ <img className="cat"src="{url}"alt="" ></img>
 </div>
 
     );

@@ -4,14 +4,14 @@ import React from 'react';
 
 import './App.css';
 
- const Cat =  ({url}) =>{
+ const Cat =  ({image}) =>{
 
 
     return(
 
   <div className="items">  
-  <h1>Cats Are Cool</h1>
- <img className="cat"src="{image}"alt="" ></img>
+  <h1>Cats</h1>
+ <img className="cat"src={image} alt="" ></img>
 </div>
 
     );

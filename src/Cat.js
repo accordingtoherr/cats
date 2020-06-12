@@ -11,7 +11,7 @@ import './App.css';
 
   <div className="items">  
   <h1>Cats</h1>
- <img className="cat"src={image} alt="" ></img>
+ <img src={image} alt="" ></img>
 </div>
 
     );

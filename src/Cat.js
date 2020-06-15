@@ -1,5 +1,5 @@
 import React from 'react';
-// get our fontawesome imports
+
 
 
 import './App.css';

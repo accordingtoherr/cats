@@ -1,46 +1,32 @@
-import React, { useEffect, useState, Component } from 'react'
+import React, { useEffect, useState,Component, componentDidMount } from 'react'
 // get our fontawesome imports
 
 
 import Cat from './Cat.js';
 import './App.css'
+import Axios from 'axios';
 
 
 
-const App = () => {
-  const appKey = '5ef112e1-2aca-410a-8c2c-2548dc6766fb';
- 
-  const [cats, setCats] = useState([]);
-
-
-
-  useEffect(() => {
-    getCats();
-  }, [])
-
-  const getCats = async () => {
-    const response = await fetch(`https://api.thecatapi.com/v1/images/search?=${appKey}`)
-
-
-    const data = await response.json();
-
-
-    setCats(data.url);
-    console.log(data);
-    // setSubs(prevSubs => prevSubs.concat(data.data.children)) // Use this setState with function argument if you want to concat API response with previous state data
+class App extends React.Component {
+  state = {
+    loading: false,
+    repos: null
+  }
+  componentDidMount() {
+    this.setState({ loading: true });
+    fetch(` https://api.thecatapi.com/v1/images/search`)
+      .then(json => json.json())
+      .then(repos => {
+        this.setState({ loading: false, repos: repos });
+      });
   }
 
 
 
-  return (
-    <div className="App">
-      <h1 className="header">
-     
-      </h1>
-    
-        <button type="submit" className="button">New Cat</button>
-        <div className="ginny">
-        {cats && cats.map((cats) => 
+render() {
+    return (
+    this.map.url;
 
 
 (<Cat
@@ -50,15 +36,11 @@ image={cats.data.cats.url} /> )) };
 
 
 
- 
+
 
 </div>
-
-
-
-         
-    </div>
-  )
+    )
+  }
 }
 
-export default App;
+export default App

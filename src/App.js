@@ -1,44 +1,38 @@
-import React, { useEffect, useState,Component, componentDidMount } from 'react'
-// get our fontawesome imports
-
+import React, { Component } from "react";
 
 import Cat from './Cat.js';
 import './App.css'
-import Axios from 'axios';
+
 
 
 
 class App extends React.Component {
   state = {
     loading: false,
-    repos: null
+    
+    
   }
   componentDidMount() {
     this.setState({ loading: true });
     fetch(` https://api.thecatapi.com/v1/images/search`)
       .then(json => json.json())
-      .then(repos => {
-        this.setState({ loading: false, repos: repos });
-      });
-  }
+      
+      
+  };
 
+  componentWillUnmount(){
+    this.setState({ loading: true });
+    fetch(` https://api.thecatapi.com/v1/images/search`)
+
+  }
 
 
 render() {
     return (
-    this.map.url;
 
 
-(<Cat
+<h1>yo</h1>
 
-image={cats.data.cats.url} /> )) };
-
-
-
-
-
-
-</div>
     )
   }
 }

@@ -1,40 +1,31 @@
 import React, { Component } from "react";
 
-import Cat from './Cat.js';
-import './App.css'
+import css from './App.css';
+import CatFetchingComponent from "./Cat";
 
-
-
-
-class App extends React.Component {
+class App extends Component {
   state = {
-    loading: false,
-    
-    
-  }
-  componentDidMount() {
-    this.setState({ loading: true });
-    fetch(` https://api.thecatapi.com/v1/images/search`)
-      .then(json => json.json())
-      
-      
+    pokedexNumber: 151
   };
 
-  componentWillUnmount(){
-    this.setState({ loading: true });
-    fetch(` https://api.thecatapi.com/v1/images/search`)
-
-  }
-
-
-render() {
+  render() {
     return (
-
-
-<h1>yo</h1>
-
-    )
+      <div className="App">
+        <h1>Cats</h1>
+        <button
+          type="button"
+          onClick={() =>
+            this.setState({
+              url: Math.floor(Math.random() * 22) + 1
+            })
+          }
+        >
+          Random Cat
+        </button>
+        <CatFetchingComponent url={this.state.url} /> 
+        </div>
+    );
   }
 }
 
-export default App
+export default App;

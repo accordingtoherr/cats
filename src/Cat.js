@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { Component, useState, useEffect } from "react";
+
+import Cat from './Cat.js';
+import './App.css'
 
 
 
-import './App.css';
-
- const Cat =  ({image}) =>{
-
-
-    return(
-
-  <div className="items">  
-  <h1>Cats</h1>
- <img src={image} alt="" ></img>
-</div>
-
-    );
- }
+const CatSearchWithFunction = props => {
+   const [url, setUrl] = useState("");
  
- export default Cat;
+   const fetchData = async () => {
+     try {
+       let response = await fetch(
+         `https://api.thecatapi.com/v1/images/search/${this.props.url}`
+       );
+       let data = await response.json();
+       setUrl(data);
+       console.log(data);
+     } catch {
+       console.log("Something went horribly wrong");
+      
+     }
+   };
+ 
+   useEffect(() => {
+     fetchData();
+   });
+ 
+   return (
+     <div>
+       
+       <img src={url} />
+     </div>
+   );
+ };
+ 
+ export default CatSearchWithFunction;
+ 

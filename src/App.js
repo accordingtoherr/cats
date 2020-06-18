@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 
-import css from './App.css';
+
 import CatFetchingComponent from "./Cat";
 
 class App extends Component {
   state = {
-    pokedexNumber: 151
+    url: ''
+    
   };
 
   render() {

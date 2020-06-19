@@ -8,12 +8,12 @@ const CatSearchWithFunction = props => {
    const [imgUrl, setImgUrl] = useState("");
  useEffect(() => {
 
- }, [])
+ }, []);
 
    const fetchData = async () => {
      try {
        let response = await fetch(
-         `https://api.thecatapi.com/v1/images/search/${this.props.data.url}`
+         `https://api.thecatapi.com/v1/images/search/${props.url}`
          
        );
 

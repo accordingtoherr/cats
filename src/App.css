@@ -10,3 +10,10 @@ button {
   border: none;
   border-radius: 8px;
 }
+
+.img{
+  max-height: 100%;
+  max-width: 100%;
+  align-items: center;
+    justify-content: center;
+}

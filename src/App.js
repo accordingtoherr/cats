@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Cats</h1>
+        <h1>Random Cats</h1>
         <button
           type="button"
           onClick={() =>
@@ -21,7 +21,7 @@ class App extends Component {
             })
           }
         >
-          Random Cat
+        Another Cat
         </button>
         <CatFetchingComponent url={this.state.url} /> 
         </div>

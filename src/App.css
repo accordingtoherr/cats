@@ -1,9 +1,15 @@
 .App {
   text-align: center;
+  background: url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1057&q=80")
+  
+}
+
+h1{
+  color: white;
 }
 
 button {
-  background: green;
+  background: rgb(241, 252, 241);
   color: #fff;
   
   padding: 8px 16px;
@@ -11,9 +17,10 @@ button {
   border-radius: 8px;
 }
 
-.img{
-  max-height: 100%;
-  max-width: 100%;
+.catpic{
+ width: 700px;
+  height: 700px;
   align-items: center;
     justify-content: center;
+    border-radius: 9%;
 }

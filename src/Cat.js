@@ -1,6 +1,5 @@
-import React, { Component, useState, useEffect } from "react";
+import React, {useState, useEffect } from "react";
 
-import Cat from './Cat.js';
 import './App.css'
 
 
@@ -9,7 +8,7 @@ const CatSearchWithFunction = props => {
    const [imgUrl, setImgUrl] = useState("");
  useEffect(() => {
 
- })
+ }, [])
 
    const fetchData = async () => {
      try {
@@ -21,8 +20,8 @@ const CatSearchWithFunction = props => {
        let data = await response.json();
        setImgUrl(data[0].url);
      
-     } catch {
-       console.log("Whoops");
+     } catch(e) {
+       console.log("Whoops",e);
       
      }
    };

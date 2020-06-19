@@ -7,19 +7,22 @@ import './App.css'
 
 const CatSearchWithFunction = props => {
    const [imgUrl, setImgUrl] = useState("");
- 
+ useEffect(() => {
+
+ })
+
    const fetchData = async () => {
      try {
        let response = await fetch(
-         `https://api.thecatapi.com/v1/images/search/${this.props.url}`
+         `https://api.thecatapi.com/v1/images/search/${this.props.data.url}`
          
        );
 
        let data = await response.json();
-       setImgUrl(data.url);
-       console.log(data.url);
+       setImgUrl(data[0].url);
+     
      } catch {
-       console.log("Something went horribly wrong");
+       console.log("Whoops");
       
      }
    };

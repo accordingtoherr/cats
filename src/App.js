@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-
 import CatFetchingComponent from "./Cat";
+
 
 class App extends Component {
   state = {

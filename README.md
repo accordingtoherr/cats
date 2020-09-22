@@ -1,3 +1,9 @@
+Fun Random Cat Photo Generator
+
+The UI is simple and includes a CTA "New Cat", the photo, and a space-themed background, just for fun. When a user clicks on the CTA, a new cat image populates the application.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

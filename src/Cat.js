@@ -1,12 +1,8 @@
 import React, {useState, useEffect } from "react";
-
 import './App.css'
-
-
 
 const CatSearchWithFunction = props => {
    const [imgUrl, setImgUrl] = useState("");
-
 
    const fetchData = async () => {
      try {
@@ -20,8 +16,7 @@ const CatSearchWithFunction = props => {
        setImgUrl(data[0].url);
      
      } catch(e) {
-       console.log("Whoops",e);
-      
+       console.log("Whoops",e);  
      }
    };
  
@@ -30,9 +25,8 @@ const CatSearchWithFunction = props => {
    }, [props.url]);
  
    return (
-     <div>
-       
-       <img className="catpic" src={imgUrl} />
+     <div> 
+       <img className="catpic" src={imgUrl} alt="catpic"/>
      </div>
    );
  };
